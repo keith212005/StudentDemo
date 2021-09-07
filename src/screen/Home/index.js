@@ -9,18 +9,22 @@ import {
   SafeAreaView,
   FlatList,
   Pressable,
+  Image,
 } from 'react-native';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import auth from '@react-native-firebase/auth';
 import {CommonActions} from '@react-navigation/native';
 import firestore from '@react-native-firebase/firestore';
+import storage from '@react-native-firebase/storage';
 
 import {SquareButton, CustomInput, CustomLoader} from '@components';
 import {actionCreators} from '@action';
 import {styles} from './style';
 import {fieldObject} from '@constants';
 import {firebaseDb} from '@database';
+
+let urls = null;
 
 class Home extends Component {
   constructor(props) {
@@ -35,6 +39,7 @@ class Home extends Component {
       image: fieldObject,
       studentList: [],
       addUpdate: 'Add',
+      pic: '',
     };
 
     this.onResult = this.onResult.bind(this);
@@ -43,9 +48,13 @@ class Home extends Component {
   }
 
   async componentDidMount() {
+    auth().signInAnonymously();
+    urls = await storage().ref('Users/Ketan passport pic.jpg').getDownloadURL();
+
     const subscriber = firestore()
       .collection('students')
       .onSnapshot(this.onResult, this.onError);
+    console.log('urls>>>>', urls);
   }
 
   componentWillUnmount() {}
@@ -321,6 +330,10 @@ class Home extends Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
+        <Image
+          source={{uri: urls}}
+          style={{height: 100, width: 100, alignSelf: 'center'}}
+        />
         <Text style={styles.loginText}>Enter Student Details</Text>
         {this._renderCustomInput(0, 'name', 'Student name')}
         {this._renderCustomInput(1, 'subject1', 'Subject 1 marks', {

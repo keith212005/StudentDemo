@@ -776,7 +776,7 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@expo/config-plugins@^3.0.7":
+"@expo/config-plugins@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@expo/config-plugins/-/config-plugins-3.1.0.tgz#0752ff33c5eab21cf42034a44e79df97f0f867f8"
   integrity sha512-V5qxaxCAExBM0TXmbU1QKiZcAGP3ecu7KXede8vByT15cro5PkcWu2sSdJCYbHQ/gw6Vf/i8sr8gKlN8V8TSLg==
@@ -1196,12 +1196,12 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/netinfo/-/netinfo-6.0.1.tgz#7d0adaf5cd8b7f77561a8e2d534cc61d6c25a0f6"
   integrity sha512-hajGhBGr4QsC6/mclyb2TlBBY8D3wiMxskO4u7zcQoYtX3CHrYjRJjgQFOwOIxLU+HaK1d7Kdk+kSxMlnMs4Kg==
 
-"@react-native-firebase/app@^12.7.4":
-  version "12.7.4"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-12.7.4.tgz#aa41a8b68881c7ced3a9b9125306bc3935b12fb6"
-  integrity sha512-ao8jSyevNItQ1sFhn2yAS7BIMGChbQVfJj5/9bsJ7OdS2gQx6vczh6N0QB7AlGfzpYT/w+4xebJvnBs21V3jpg==
+"@react-native-firebase/app@^12.7.5":
+  version "12.7.5"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-12.7.5.tgz#337fd517a6329dd9d734b36ca91bf0c54cc3a337"
+  integrity sha512-q3NjTHiO4zjPmXopuRuBxbJw5rX5JqqQmE6a+77ONEI+yCx1VF/p+545+plOY1HhA8PqUuWfbqZlbWlYo5K5IA==
   dependencies:
-    "@expo/config-plugins" "^3.0.7"
+    "@expo/config-plugins" "^3.1.0"
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
 
@@ -1214,6 +1214,11 @@
   version "12.7.4"
   resolved "https://registry.yarnpkg.com/@react-native-firebase/firestore/-/firestore-12.7.4.tgz#a4b3bc894e36289ff720896b4b33c005e7e04ab4"
   integrity sha512-UOyBNxV5Lj2aIK1jFY/ZpPLpp0iSVTerVvTW6rOBOnNlyzrTmvVrMXoMhus454IDRzS+5X5pUt2oRP7ruSM16Q==
+
+"@react-native-firebase/storage@^12.7.5":
+  version "12.7.5"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/storage/-/storage-12.7.5.tgz#62bfc9fd1047ceec9eb3292ac6448fd9d848216e"
+  integrity sha512-ElwvlB841wpU5Ul94o9EWZ/c28THWl0I58OSzimhPl3N4wj8Wk27Re8+eTExCwkZXfOOslMayfE8utUOvSE8Hw==
 
 "@react-native-masked-view/masked-view@^0.2.6":
   version "0.2.6"
